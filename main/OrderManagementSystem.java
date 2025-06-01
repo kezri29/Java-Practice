@@ -98,6 +98,17 @@ class BadOrderExample {
     }
 }
 
+class tempClass {
+    int x=10;
+    String y="test";
+
+    void doStuff(){
+    System.out.println("Doing stuff "+x+y);
+    }
+
+    void badMethod(){System.out.println("This line is way too long and doesn't follow any Java formatting rules and lacks proper indentation or structure and just keeps going on and on without line breaks");}
+}
+
 public class OrderManagementSystem {
     public static void main(String[] args) {
         OrderService service = new OrderService();
