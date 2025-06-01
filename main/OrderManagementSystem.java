@@ -96,5 +96,6 @@ public class OrderManagementSystem {
         // Process payment
         PaymentMethod payment = new CreditCardPayment("1234-5678-9012-3456");
         service.processOrder(order1.getOrderId(), payment);
+        System.out.println("Hello there");
     }
 }
