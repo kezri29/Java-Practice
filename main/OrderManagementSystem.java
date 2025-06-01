@@ -84,6 +84,31 @@ class OrderService {
     }
 }
 
+// 🔍 New Class to Trigger Code Review Agent
+class BadOrderExample {
+    int abc = 23;
+    int a = 5; // magic number
+    String b = "HardcodedCustomer"; // poor naming, hardcoded
+
+    void doStuff() { // unclear method name
+        System.out.println("This is doing stuff with " + b);
+        if (a == 5) { // again magic number
+            System.out.println("Order confirmed.");
+        }
+    }
+}
+
+class tempClass {
+    int x=10;
+    String y="test";
+
+    void doStuff(){
+    System.out.println("Doing stuff "+x+y);
+    }
+
+    void badMethod(){System.out.println("This line is way too long and doesn't follow any Java formatting rules and lacks proper indentation or structure and just keeps going on and on without line breaks");}
+}
+
 public class OrderManagementSystem {
     public static void main(String[] args) {
         OrderService service = new OrderService();
@@ -96,6 +121,11 @@ public class OrderManagementSystem {
         // Process payment
         PaymentMethod payment = new CreditCardPayment("1234-5678-9012-3456");
         service.processOrder(order1.getOrderId(), payment);
+
+        // Run bad example
+        BadOrderExample example = new BadOrderExample();
+        example.doStuff();
+
         System.out.println("Hello there");
     }
 }
