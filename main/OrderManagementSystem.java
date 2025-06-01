@@ -86,6 +86,7 @@ class OrderService {
 
 // 🔍 New Class to Trigger Code Review Agent
 class BadOrderExample {
+    int abc = 23;
     int a = 5; // magic number
     String b = "HardcodedCustomer"; // poor naming, hardcoded
 
