@@ -84,24 +84,28 @@ class OrderService {
     }
 }
 
-// BAD: Violates Java coding standards (for testing purposes)
 
-class RandomLogicBlob {
-double a=3.14159;String t="debug";boolean ready=false;int[] arr={1,2,3,4,5};
+// BAD: Inconsistent formatting, magic values, improper logic, no encapsulation or comments
 
-void mainLogic(){
-if(t=="debug")System.out.println("Debugging mode enabled, value of a: "+a);
-for(int i=0;i<arr.length;i++){System.out.print(arr[i]+" ");}System.out.println();
-a+=100.1234;if(a>9999.99){System.out.println("Value overflow detected but no handling implemented");}
+class ConfusedOperations{
+String status="idle";int count=0;double dVal=5.5;
+
+void doWork(){
+if(count<10){count++;System.out.println("Count is now "+count);}else{count=0;System.out.println("Resetting count");}
+System.out.println("Current status: "+status+" with value "+dVal);
+dVal*=Math.random()*100;
 }
 
-void chaos(){
-System.out.println("This method contains a chaotic mess of operations:");int x=0;while(x<10){System.out.print(x+", ");x+=2;}System.out.println("done.");t="chaos";a=0;ready=!ready;
-System.out.println("Hello there");
+void updateStatus(){
+if(status=="idle")status="running";else if(status=="running")status="complete";else status="idle";
+System.out.println("Updated status to "+status);
 }
 
-void nothing(){}
+void sloppyMath(){
+double r=(10*5/2+3.14159)-4*2.71*7.7;System.out.println("Calculated: "+r);
 }
+}
+
 
 
 public class OrderManagementSystem {
