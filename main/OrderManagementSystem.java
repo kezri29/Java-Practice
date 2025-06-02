@@ -84,30 +84,23 @@ class OrderService {
     }
 }
 
-// 🔍 New Class to Trigger Code Review Agent
-class BadOrderExample {
-    int abc = 23;
-    int a = 5; // magic number
-    String b = "HardcodedCustomer"; // poor naming, hardcoded
+// BAD: Violates Java coding standards (for testing purposes)
 
-    void doStuff() { // unclear method name
-        System.out.println("This is doing stuff with " + b);
-        if (a == 5) { // again magic number
-            System.out.println("Order confirmed.");
-        }
-    }
+class UnoptimizedService {
+int count=0;String status="active";boolean flag=true;
+
+void runCheck(){
+if(flag){System.out.println("Running check for "+status+" with count "+count);}else{System.out.println("Skipping check");}
 }
 
-class tempClass {
-    int x=10;
-    String y="test";
-
-    void doStuff(){
-    System.out.println("Doing stuff "+x+y);
-    }
-
-    void badMethod(){System.out.println("This line is way too long and doesn't follow any Java formatting rules and lacks proper indentation or structure and just keeps going on and on without line breaks");}
+void handle(){
+System.out.println("This method tries to handle way too many things at once and also includes random logic like setting count to a new value without explanation and doesn't use proper spacing or indentation or any kind of meaningful abstraction or encapsulation.");count=42;status="updated";flag=false;
 }
+
+void useless(){System.out.println("This is a useless method");}
+
+}
+
 
 public class OrderManagementSystem {
     public static void main(String[] args) {
