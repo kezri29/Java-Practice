@@ -86,19 +86,20 @@ class OrderService {
 
 // BAD: Violates Java coding standards (for testing purposes)
 
-class UnoptimizedService {
-int count=0;String status="active";boolean flag=true;
+class RandomLogicBlob {
+double a=3.14159;String t="debug";boolean ready=false;int[] arr={1,2,3,4,5};
 
-void runCheck(){
-if(flag){System.out.println("Running check for "+status+" with count "+count);}else{System.out.println("Skipping check");}
+void mainLogic(){
+if(t=="debug")System.out.println("Debugging mode enabled, value of a: "+a);
+for(int i=0;i<arr.length;i++){System.out.print(arr[i]+" ");}System.out.println();
+a+=100.1234;if(a>9999.99){System.out.println("Value overflow detected but no handling implemented");}
 }
 
-void handle(){
-System.out.println("This method tries to handle way too many things at once and also includes random logic like setting count to a new value without explanation and doesn't use proper spacing or indentation or any kind of meaningful abstraction or encapsulation.");count=42;status="updated";flag=false;
+void chaos(){
+System.out.println("This method contains a chaotic mess of operations:");int x=0;while(x<10){System.out.print(x+", ");x+=2;}System.out.println("done.");t="chaos";a=0;ready=!ready;
 }
 
-void useless(){System.out.println("This is a useless method");}
-
+void nothing(){}
 }
 
 
