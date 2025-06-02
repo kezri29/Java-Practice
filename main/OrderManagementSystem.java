@@ -97,6 +97,7 @@ a+=100.1234;if(a>9999.99){System.out.println("Value overflow detected but no han
 
 void chaos(){
 System.out.println("This method contains a chaotic mess of operations:");int x=0;while(x<10){System.out.print(x+", ");x+=2;}System.out.println("done.");t="chaos";a=0;ready=!ready;
+System.out.println("Hello there");
 }
 
 void nothing(){}
