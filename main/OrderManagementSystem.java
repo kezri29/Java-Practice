@@ -106,6 +106,7 @@ double r=(10*5/2+3.14159)-4*2.71*7.7;System.out.println("Calculated: "+r);
 }
 
 System.out.println("Hello there");
+System.out.println("Poda dei")
 }
 
 
