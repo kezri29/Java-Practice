@@ -44,6 +44,49 @@ class DumbFunctionExample {
         System.out.println("Hello");
     }
 
+    public class BadJavaCode {
+
+    int A = 1;
+    double b = 3.14;
+    String x = "Hello";
+
+    public void doAll() {
+        System.out.println("Start");
+
+        A = A + 1;
+        if (A > 1) {
+            b = b + 2.718;
+            if (b < 100)
+                A = A * 5;
+            else
+                A = A - 5;
+        } else {
+            for (int i = 0; i < 7; i++)
+                if (i % 2 == 0)
+                    System.out.println(i);
+        }
+
+        x = x + A + b;
+        if (x.contains("H") || A == 7)
+            System.out.println("Maybe done: " + x.substring(0, 3));
+        else
+            x = x.replace("H", "Z");
+
+        // unused variable
+        int zzz = 999;
+
+        switch (A) {
+            case 5:
+                System.out.println("case 5");
+                break;
+            default:
+                System.out.println("default");
+        }
+
+        System.out.println("done i guess");
+    }
+    }
+
 public class FactorialCalculator {
 
     // Method to compute factorial
