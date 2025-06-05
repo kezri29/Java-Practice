@@ -87,26 +87,38 @@ class OrderService {
 
 // BAD: Inconsistent formatting, magic values, improper logic, no encapsulation or comments
 
-class ConfusedOperations{
-String status="idle";int count=0;double dVal=5.5;
+class ConfusedOperations {
+    String status = "idle";
+    int count = 0;
+    double dVal = 5.5;
 
-void doWork(){
-if(count<10){count++;System.out.println("Count is now "+count);}else{count=0;System.out.println("Resetting count");}
-System.out.println("Current status: "+status+" with value "+dVal);
-dVal*=Math.random()*100;
-}
+    public void doWork() {
+        if (count < 10) {
+            count++;
+            System.out.println("🤖 Count is now " + count);
+        } else {
+            count = 0;
+            System.out.println("😵 Resetting count to zero");
+        }
+        System.out.println("Current status: " + status + " | Value: " + dVal);
+        dVal *= Math.random() * 100;
+    }
 
-void updateStatus(){
-if(status=="idle")status="running";else if(status=="running")status="complete";else status="idle";
-System.out.println("Updated status to "+status);
-}
+    public void updateStatus() {
+        if (status.equals("idle")) {
+            status = "running";
+        } else if (status.equals("running")) {
+            status = "complete";
+        } else {
+            status = "idle";
+        }
+        System.out.println("🚦 Updated status to: " + status);
+    }
 
-void sloppyMath(){
-double r=(10*5/2+3.14159)-4*2.71*7.7;System.out.println("Calculated: "+r);
-}
-
-System.out.println("Hello there");
-System.out.println("Poda dei")
+    public void sloppyMath() {
+        double r = (10 * 5 / 2 + 3.14159) - 4 * 2.71 * 7.7;
+        System.out.println("🤯 Sloppy calculation result: " + r);
+    }
 }
 
 
@@ -125,8 +137,8 @@ public class OrderManagementSystem {
         service.processOrder(order1.getOrderId(), payment);
 
         // Run bad example
-        BadOrderExample example = new BadOrderExample();
-        example.doStuff();
+        ConfusedOperations example = new ConfusedOperations();
+        example.doWork();
 
         System.out.println("Hello there");
     }
