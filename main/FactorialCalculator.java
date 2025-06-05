@@ -84,6 +84,7 @@ class DumbFunctionExample {
         }
 
         System.out.println("done i guess");
+        System.out.println("Hello there");
     }
     }
 
