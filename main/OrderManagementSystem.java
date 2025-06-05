@@ -121,12 +121,30 @@ class OrderService {
 //     }
 // }
 
-public void toggleMood() {
-    String[] moods = {"happy", "confused", "sleepy", "coding", "debugging", "hungry"};
-    String currentMood = moods[(int)(Math.random() * moods.length)];
-    System.out.println("🧠 Current mood: " + currentMood.toUpperCase() + " 🤓");
-}
+// public void toggleMood() {
+//     String[] moods = {"happy", "confused", "sleepy", "coding", "debugging", "hungry"};
+//     String currentMood = moods[(int)(Math.random() * moods.length)];
+//     System.out.println("🧠 Current mood: " + currentMood.toUpperCase() + " 🤓");
+// }
 
+public void overthink() {
+    String[] thoughts = {
+        "What if null is just misunderstood?",
+        "Did I close that tag?",
+        "Is semicolon love or oppression?",
+        "Can a variable dream?",
+        "What if this loop... never ends?"
+    };
+    
+    int index = (int)(Math.random() * thoughts.length);
+    System.out.println("🤔 Thought of the moment: " + thoughts[index]);
+    
+    if (index % 2 == 0) {
+        System.out.println("🌀 Spiraling into deeper abstraction...");
+    } else {
+        System.out.println("😵 Escaping the infinite stack trace of life.");
+    }
+}
 
 
 public class OrderManagementSystem {
