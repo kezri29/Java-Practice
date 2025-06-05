@@ -41,6 +41,7 @@ class DumbFunctionExample {
         }
 
         System.out.println("🎉 Function ended with no clear purpose.");
+        System.out.println("Hello");
     }
 
 public class FactorialCalculator {
