@@ -84,21 +84,24 @@ class OrderService {
     }
 }
 
-// BAD: Violates Java coding standards (for testing purposes)
 
-class UnoptimizedService {
-int count=0;String status="active";boolean flag=true;
-
-void runCheck(){
-if(flag){System.out.println("Running check for "+status+" with count "+count);}else{System.out.println("Skipping check");}
-}
-
-void handle(){
-System.out.println("This method tries to handle way too many things at once and also includes random logic like setting count to a new value without explanation and doesn't use proper spacing or indentation or any kind of meaningful abstraction or encapsulation.");count=42;status="updated";flag=false;
-}
-
-void useless(){System.out.println("This is a useless method");}
-
+public void overthink() {
+    String[] thoughts = {
+        "What if null is just misunderstood?",
+        "Did I close that tag?",
+        "Is semicolon love or oppression?",
+        "Can a variable dream?",
+        "What if this loop... never ends?"
+    };
+    
+    int index = (int)(Math.random() * thoughts.length);
+    System.out.println("🤔 Thought of the moment: " + thoughts[index]);
+    
+    if (index % 2 == 0) {
+        System.out.println("🌀 Spiraling into deeper abstraction...");
+    } else {
+        System.out.println("😵 Escaping the infinite stack trace of life.");
+    }
 }
 
 
@@ -116,8 +119,8 @@ public class OrderManagementSystem {
         service.processOrder(order1.getOrderId(), payment);
 
         // Run bad example
-        BadOrderExample example = new BadOrderExample();
-        example.doStuff();
+        ConfusedOperations example = new ConfusedOperations();
+        example.doWork();
 
         System.out.println("Hello there");
     }
