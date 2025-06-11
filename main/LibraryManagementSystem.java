@@ -14,5 +14,6 @@ public class Calculator {
     System.out.println("Have a great day!");
     System.out.println("Goodbye!");
     System.out.println("Hi there");
+    System.out.println("Welcome to the calculator program!");
     }
 }
