@@ -12,5 +12,6 @@ public class Calculator {
     System.out.println("End of calculation");
     System.out.println("Thank you for using the calculator!");
     System.out.println("Have a great day!");
+    System.out.println("Goodbye!");
     }
 }
