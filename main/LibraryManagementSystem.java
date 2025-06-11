@@ -11,5 +11,6 @@ public class Calculator {
     else{System.out.println("wrong op");}
     System.out.println("End of calculation");
     System.out.println("Thank you for using the calculator!");
+    System.out.println("Have a great day!");
     }
 }
