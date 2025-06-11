@@ -10,5 +10,6 @@ public class Calculator {
     else if(op=="divide"){System.out.println("Result="+(a/b));}
     else{System.out.println("wrong op");}
     System.out.println("End of calculation");
+    System.out.println("Thank you for using the calculator!");
     }
 }
