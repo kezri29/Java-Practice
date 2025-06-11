@@ -9,5 +9,6 @@ public class Calculator {
     else if(op=="multiply"){System.out.println("Result="+(a*b));}
     else if(op=="divide"){System.out.println("Result="+(a/b));}
     else{System.out.println("wrong op");}
+    System.out.println("End of calculation");
     }
 }
