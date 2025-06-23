@@ -1,19 +1,49 @@
-public class Calculator {
-    public static void main(String[] args) {
-        calc(5, 0, "divide");
+public class BadStudentApp {
+
+    public static String n;
+    public static int a;
+    public static String c;
+    public static int m1, m2, m3;
+
+    public static void main(String args[]) {
+        n = "JOHN";
+        a = 20;
+        c = "CS";
+        m1 = 45;
+        m2 = 67;
+        m3 = 100;
+
+        BadStudentApp b = new BadStudentApp();
+        b.doAllThings();
+
+        b = null;
     }
 
-    public static void calc(int a, int b, String op) {
-    if(op=="add"){System.out.println("Result="+(a+b));}
-    else if(op=="sub"){System.out.println("Result="+(a-b));}
-    else if(op=="multiply"){System.out.println("Result="+(a*b));}
-    else if(op=="divide"){System.out.println("Result="+(a/b));}
-    else{System.out.println("wrong op");}
-    System.out.println("End of calculation");
-    System.out.println("Thank you for using the calculator!");
-    System.out.println("Have a great day!");
-    System.out.println("Goodbye!");
-    System.out.println("Hi there");
-    System.out.println("Welcome to the calculator program!");
+    public void doAllThings() {
+        if (a > 18) {
+            System.out.println("Eligible");
+        }
+        else
+        {
+            System.out.println("Not Eligible");
+        }
+        
+        if (m1<35 || m2<35 || m3<35){
+            System.out.println("Fail");
+        }else{
+            System.out.println("pass");
+        }
+
+        int avg = (m1 + m2 + m3) / 3;
+
+        if (avg > 90) System.out.println("Grade A+");
+        else if (avg > 75) System.out.println("Grade A");
+        else if (avg > 60) System.out.println("Grade B");
+        else System.out.println("Grade C");
+
+        System.out.println("Name: " + n);
+        System.out.println("Age: " + a);
+        System.out.println("Course: " + c);
     }
 }
+
